@@ -19,22 +19,30 @@ public class MailCron {
 	@Autowired
     private JavaMailSender javaMailSender;
 	
-	@Scheduled(cron = " 0 0 10 * * ?")
+	// test method
+	@Scheduled(cron = " 0 50 3 * * *")
 	public void sendMailFirst() {
 		getMail();
 	}
 	
-	@Scheduled(cron = " 0 0 13 * * ?")
+	
+	
+	@Scheduled(cron = " 0 30 4 * * *")
+	public void sendMailFirst() {
+		getMail();
+	}
+	
+	@Scheduled(cron = " 0 0 8 * * *")
 	public void sendMailmid() {
 		getMail();
 	}
 	
-	@Scheduled(cron = " 0 0 17 * * ?")
+	@Scheduled(cron = " 0 0 12 * * *")
 	public void sendMailevening() {
 		getMail();
 	}
 
-	@Scheduled(cron = " 0 00 19 * * ?")
+	@Scheduled(cron = " 0 0 14 * * *")
 	public void sendMailSecond() {
 		System.out.println("rajat");
 		getMail();
