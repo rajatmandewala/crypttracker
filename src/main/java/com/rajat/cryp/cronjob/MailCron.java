@@ -21,7 +21,7 @@ public class MailCron {
 	
 	// test method
 	@Scheduled(cron = " 0 50 3 * * *")
-	public void sendMailFirst() {
+	public void sendMailTest() {
 		getMail();
 	}
 	

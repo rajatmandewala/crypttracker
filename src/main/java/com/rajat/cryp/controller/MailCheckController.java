@@ -6,6 +6,9 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.TimeZone;
 
@@ -25,13 +28,10 @@ public class MailCheckController {
         msg.setText("Hello World \n Spring Boot Email");
 
         javaMailSender.send(msg);
-		Calendar c = Calendar.getInstance();
-          
-        //get current TimeZone using
-        TimeZone tz = c.getTimeZone();
-          
-        System.out.println("Current TimeZone is : " + tz.getDisplayName());
-		return "hello"+ tz.getDisplayName();
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+        LocalDateTime now = LocalDateTime.now();  
+        //System.out.println(dtf.format(now));
+		return "hello="+ dtf.format(now);
 	}
 
 }
