@@ -20,13 +20,28 @@ public class MailCron {
     private JavaMailSender javaMailSender;
 	
 	// test method
-	@Scheduled(cron = " 0 0 16 * * *")
+	@Scheduled(cron = " 0 05 16 * * *")
 	public void sendMailTest() {
 		getMail();
 	}
 	
+	@Scheduled(cron = " 0 07 16 * * *")
+	public void t1() {
+		getMail();
+	}
+	
+	@Scheduled(cron = " 0 08 16 * * *")
+	public void t2() {
+		getMail();
+	}
+	
+	@Scheduled(cron = " 0 09 16 * * *")
+	public void t3 {
+		getMail();
+	}
 	
 	
+	//
 	@Scheduled(cron = " 0 30 4 * * *")
 	public void sendMailFirst() {
 		getMail();
