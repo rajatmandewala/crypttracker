@@ -6,6 +6,8 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import java.util.Calendar;
+import java.util.TimeZone;
 
 @RestController
 @RequestMapping(value="/sendmail")
@@ -23,8 +25,13 @@ public class MailCheckController {
         msg.setText("Hello World \n Spring Boot Email");
 
         javaMailSender.send(msg);
-		
-		return "hello";
+		Calendar c = Calendar.getInstance();
+          
+        //get current TimeZone using
+        TimeZone tz = c.getTimeZone();
+          
+        System.out.println("Current TimeZone is : " + tz.getDisplayName());
+		return "hello"+ tz.getDisplayName();
 	}
 
 }
