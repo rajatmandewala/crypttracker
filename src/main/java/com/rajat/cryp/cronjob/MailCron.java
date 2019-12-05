@@ -22,7 +22,7 @@ public class MailCron {
     private JavaMailSender javaMailSender;
 	
 	// test method
-	@Scheduled(fixedRate = 1000)
+	@Scheduled(fixedRate = 2000)
 	public void sendMailTest() {
 		this.getMail();
 	}
