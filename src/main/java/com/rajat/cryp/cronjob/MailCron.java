@@ -23,10 +23,10 @@ public class MailCron {
 	
 	// test method
 
-	//@Scheduled(fixedRate = 2000)
+	@Scheduled(cron = "0 0 17 * * *")
 	public void sendMailTest() {
 		System.out.println("a");
-		//this.getMail();
+		this.getMail();
 	}
 	
 	@Scheduled(cron = " 0 07 16 * * *")
