@@ -20,7 +20,7 @@ public class MailCron {
     private JavaMailSender javaMailSender;
 	
 	// test method
-	@Scheduled(cron = " 0 50 3 * * *")
+	@Scheduled(cron = " 0 0 16 * * *")
 	public void sendMailTest() {
 		getMail();
 	}
