@@ -29,12 +29,12 @@ public class MailCron {
 		this.getMail();
 	}
 	
-	@Scheduled(cron = " 0 07 16 * * *")
+	@Scheduled(cron = " 0 01 17 * * *")
 	public void t1() {
 		getMail();
 	}
 	
-	@Scheduled(cron = " 0 08 16 * * *")
+	@Scheduled(cron = " 0 02 17 * * *")
 	public void t2() {
 		getMail();
 	}
