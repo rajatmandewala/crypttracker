@@ -10,9 +10,11 @@ import org.springframework.mail.javamail.JavaMailSender;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+@Service
 @Component
 public class MailCron {
 
@@ -20,9 +22,9 @@ public class MailCron {
     private JavaMailSender javaMailSender;
 	
 	// test method
-	@Scheduled(cron = " 0 0 16 * * *")
+	@Scheduled(fixedRate = 1000)
 	public void sendMailTest() {
-		getMail();
+		this.getMail();
 	}
 	
 	
