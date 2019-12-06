@@ -42,23 +42,23 @@ public class MailCron {
 
 	
 	
-	//
+	//10 am ist
 	@Scheduled(cron = " 0 30 4 ? * *")
 	public void sendMailFirst() {
 		getMail();
 	}
-	
-	@Scheduled(cron = " 0 0 8 ? * *")
+	//1 pm ist
+	@Scheduled(cron = " 0 30 7 ? * *")
 	public void sendMailmid() {
 		getMail();
 	}
-	
-	@Scheduled(cron = " 0 0 12 ? * *")
+	//5 pm ist
+	@Scheduled(cron = " 0 30 11 ? * *")
 	public void sendMailevening() {
 		getMail();
 	}
-
-	@Scheduled(cron = " 0 0 14 ? * *")
+	//7 pm ist
+	@Scheduled(cron = " 0 30 13 ? * *")
 	public void sendMailSecond() {
 		System.out.println("rajat");
 		getMail();
