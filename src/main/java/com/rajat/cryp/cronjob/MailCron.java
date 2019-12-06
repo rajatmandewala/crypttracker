@@ -23,18 +23,18 @@ public class MailCron {
 	
 	// test method
 
-	@Scheduled(cron = "0 05 16 * * *")
+	@Scheduled(cron = "0 13 16 1/1 * ? *")
 	public void sendMailTest() {
 		System.out.println("a");
 		this.getMail();
 	}
 	
-	@Scheduled(cron = " 0 07 16 * * *")
+	@Scheduled(cron = " 0 07 16 1/1 * ? *")
 	public void t1() {
 		this.getMail();
 	}
 	
-	@Scheduled(cron = " 0 09 16 * * *")
+	@Scheduled(cron = " 0 09 16 1/1 * ? *")
 	public void t2() {
 		this.getMail();
 	}
@@ -43,22 +43,22 @@ public class MailCron {
 	
 	
 	//
-	@Scheduled(cron = " 0 30 4 * * *")
+	@Scheduled(cron = " 0 30 4 1/1 * ? *")
 	public void sendMailFirst() {
 		getMail();
 	}
 	
-	@Scheduled(cron = " 0 0 8 * * *")
+	@Scheduled(cron = " 0 0 8 1/1 * ? *")
 	public void sendMailmid() {
 		getMail();
 	}
 	
-	@Scheduled(cron = " 0 0 12 * * *")
+	@Scheduled(cron = " 0 0 12 1/1 * ? *")
 	public void sendMailevening() {
 		getMail();
 	}
 
-	@Scheduled(cron = " 0 0 14 * * *")
+	@Scheduled(cron = " 0 0 14 1/1 * ? *")
 	public void sendMailSecond() {
 		System.out.println("rajat");
 		getMail();
