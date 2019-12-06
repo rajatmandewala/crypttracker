@@ -23,13 +23,13 @@ public class MailCron {
 	
 	// test method
 
-	@Scheduled(cron = "0 14 20 * * *",zone ="UTC")
+	@Scheduled(cron = "0 21 22 * * *",zone ="IST")
 	public void sendMailTest() {
 		System.out.println("a");
 		this.getMail();
 	}
 	
-	@Scheduled(cron = " 0 16 15 * * *")
+	@Scheduled(cron = " 0 51 15 * * *",zone="UTC")
 	public void t1() {
 		this.getMail();
 	}
