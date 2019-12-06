@@ -29,7 +29,7 @@ public class MailCron {
 		this.getMail();
 	}
 	
-	@Scheduled(cron = " 0 51 15 * * *",zone="UTC")
+	@Scheduled(cron = " 0 55 15 * * * ")
 	public void t1() {
 		this.getMail();
 	}
