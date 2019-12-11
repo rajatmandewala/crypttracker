@@ -7,10 +7,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.rajat.cryp.cronjob.MailCron;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
-import java.util.TimeZone;
+
 
 @RestController
 @RequestMapping(value="/sendmail")
@@ -18,6 +19,9 @@ public class MailCheckController {
 	
 	@Autowired
     private JavaMailSender javaMailSender;
+	
+	@Autowired
+	private MailCron mailCron;
 	
 	@GetMapping
 	public String sendMail() {
@@ -33,5 +37,14 @@ public class MailCheckController {
         //System.out.println(dtf.format(now));
 		return "hello=s"+ dtf.format(now);
 	}
+	
+	@GetMapping
+	@RequestMapping(value="/sendcryp")
+	public String sendCrypMail() {		
+		mailCron.getMail();
+		return "mail sent successfully.";
+	}
+	
+	
 
 }

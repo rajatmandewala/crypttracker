@@ -3,11 +3,9 @@ package com.rajat.cryp.cronjob;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
-
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -38,8 +36,6 @@ public class MailCron {
 	public void t2() {
 		this.getMail();
 	}
-	
-
 	
 	
 	//10 am ist
