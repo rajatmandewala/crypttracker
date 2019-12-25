@@ -1,5 +1,6 @@
 package com.rajat.cryp.controller;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,5 +21,14 @@ public class NSEController {
 	public String getFile() throws IOException {
 		return nseService.downloadNseFile();
 	}
+	
+	@GetMapping
+	@RequestMapping("/s")
+	public String get() throws IOException {
+		File f=new File("a.txt");
+		return f.getCanonicalPath().toString();
+	}
+	
+	
 
 }
