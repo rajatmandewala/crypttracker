@@ -21,7 +21,7 @@ public class NSEService {
 	}
 	
 	public String downloadNseFile() throws IOException {
-		String s="src"+"\\"+"main"+"\\"+"java"+"\\"+"com"+"\\"+"rajat"+"\\"+"cryp"+"\\"+"service"+"\\";
+		String s="\\"+"app"+"\\"+"src"+"\\"+"main"+"\\"+"java"+"\\"+"com"+"\\"+"rajat"+"\\"+"cryp"+"\\"+"service"+"\\";
         String script = "script.sh";
         File fl=new File(script);
         String sa=fl.getAbsolutePath().replaceAll("script.sh", "")+s;
