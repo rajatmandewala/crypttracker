@@ -25,7 +25,7 @@ public class NSEController {
 	@GetMapping
 	@RequestMapping("/s")
 	public String get() throws IOException {
-		File f=new File("a.txt");
+		File f=new File("/app/src/main/java/com/rajat/cryp/service/a.txt");
 		return f.getCanonicalPath().toString();
 	}
 	
